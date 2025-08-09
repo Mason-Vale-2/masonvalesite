@@ -46,7 +46,7 @@ const Navigation: React.FC = () => {
             className="flex items-center hover:opacity-80 transition-opacity duration-300"
           >
             <img 
-              src="/masonvale-website/Screenshot_2025-08-04_at_02.49.14-removebg-preview.png" 
+              src="/Screenshot_2025-08-04_at_02.49.14-removebg-preview.png" 
               alt="Mason Vale" 
               className="h-20 w-auto object-contain"
             />

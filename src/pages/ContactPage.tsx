@@ -6,9 +6,7 @@ const ContactPage: React.FC = () => {
   return (
     <div className="min-h-screen w-full bg-luxury-50">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 text-white pt-20 relative" style={{ backgroundColor: '#8B9691' }}>
-        {/* Dark Overlay to match home page */}
-        <div className="absolute inset-0 w-full h-full bg-black bg-opacity-60"></div>
+      <section className="py-20 lg:py-32 text-white pt-20 relative" style={{ backgroundColor: '#909c98' }}>
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-in-up">
             Get In Touch

@@ -28,13 +28,13 @@ const Footer: React.FC = () => {
   };
 
   return (
-            <footer className="text-gray-200 py-12 border-t backdrop-blur-sm" style={{ backgroundColor: '#8B9691', borderColor: '#6A7470' }}>
+            <footer className="text-gray-200 py-12 border-t backdrop-blur-sm" style={{ backgroundColor: '#909c98', borderColor: '#6A7470' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="mb-4">
               <img 
-                src="/masonvale-website/Screenshot_2025-08-04_at_02.49.14-removebg-preview.png" 
+                src="/Screenshot_2025-08-04_at_02.49.14-removebg-preview.png" 
                 alt="Mason Vale" 
                 className="h-16 w-auto object-contain"
               />
@@ -62,14 +62,17 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="text-center md:text-right">
-            <p className="font-sans text-white mb-2">
+            <p className="font-sans text-gray-300 mb-2">
               Copyright © 2025 Mason Vale. All rights reserved.
             </p>
-            <p className="font-sans text-white text-sm">
-              Jake Amrit
+            <p className="font-sans text-gray-300 text-sm">
+              Jake Amrit - Client Director
             </p>
-            <p className="font-sans text-white text-sm mt-1">
-              Dave Warah
+            <p className="font-sans text-gray-300 text-sm mt-1">
+              Dave Warah - Director of Construction
+            </p>
+            <p className="font-sans text-gray-300 text-sm mt-1">
+              Rosario Russo - Head of Architecture
             </p>
           </div>
         </div>

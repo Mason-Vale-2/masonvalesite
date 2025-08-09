@@ -7,28 +7,28 @@ const ServicesSlideshow: React.FC = () => {
       icon: Home,
       title: 'Development & Renovations',
       description: 'Comprehensive construction services from concept to completion',
-      image: '/masonvale-website/Development-Renovations.png',
+      image: '/Development-Renovations.png',
       details: 'Transform your vision into reality with our full-service construction and renovation expertise.'
     },
     {
       icon: Palette,
       title: 'Tailored Interiors',
       description: 'Bespoke interior design solutions for luxury living spaces',
-      image: '/masonvale-website/Tailored-Interiors.png',
+      image: '/Tailored-Interiors.png',
       details: 'Create stunning interiors that reflect your personal style and enhance your lifestyle.'
     },
     {
       icon: TreePine,
       title: 'Outdoor Lifestyle',
       description: 'Creating stunning outdoor spaces and landscape designs',
-      image: '/masonvale-website/Outdoor-Lifestyle.png',
+      image: '/Outdoor-Lifestyle.png',
       details: 'Design and build exceptional outdoor living spaces that extend your home seamlessly.'
     },
     {
       icon: Zap,
       title: 'Renewable Systems & Smart Technologies',
       description: 'Cutting-edge sustainable and smart home solutions',
-      image: 'https://images.pexels.com/photos/159045/the-interior-of-the-repair-interior-design-159045.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: '/Smart-tech-Renew.png',
       details: 'Integrate the latest smart home and renewable energy technologies for modern living.'
     },
   ];
@@ -65,7 +65,7 @@ const ServicesSlideshow: React.FC = () => {
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-luxury-50" style={{ backgroundColor: '#f5f6f5' }}>
+    <section className="py-20 lg:py-32 bg-luxury-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8">

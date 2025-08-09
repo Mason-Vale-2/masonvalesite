@@ -7,7 +7,7 @@ const ServicesPage: React.FC = () => {
       icon: Home,
       title: 'Development & Renovations',
       description: 'Comprehensive construction services from concept to completion',
-      image: '/masonvale-website/Development-Renovations.png',
+              image: '/Development-Renovations.png',
       features: [
         'New Build Construction',
         'Period Property Restoration',
@@ -28,7 +28,7 @@ We have delivered complete construction from substructure to superstructure, ful
       icon: Palette,
       title: 'Tailored Interiors',
       description: 'Bespoke interior design solutions for luxury living spaces',
-      image: '/masonvale-website/Tailored-Interiors.png',
+              image: '/Tailored-Interiors.png',
       features: [
         'Luxury Interior Design',
         'Custom Furniture & Joinery',
@@ -49,7 +49,7 @@ Our portfolio includes kitchens, bathrooms, living spaces, studies, and bedrooms
       icon: TreePine,
       title: 'Outdoor Lifestyle',
       description: 'Creating stunning outdoor spaces and landscape designs',
-      image: '/masonvale-website/Outdoor-Lifestyle.png',
+              image: '/Outdoor-Lifestyle.png',
       features: [
         'Luxury Swimming Pool Design',
         'Outdoor Kitchen & Dining Areas',
@@ -66,7 +66,7 @@ Our portfolio includes kitchens, bathrooms, living spaces, studies, and bedrooms
       icon: Zap,
       title: 'Renewable Systems & Smart Technologies',
       description: 'Cutting-edge sustainable and smart home solutions',
-      image: 'https://images.pexels.com/photos/159045/the-interior-of-the-repair-interior-design-159045.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+      image: '/Smart-tech-Renew.png',
       features: [
         'Solar Panel Installation',
         'Smart Home Automation',
@@ -88,9 +88,7 @@ We provide a wide range of modern systems for homes from heating, cooling, and v
   return (
     <div className="min-h-screen w-full bg-luxury-50">
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 text-white pt-20 relative" style={{ backgroundColor: '#8B9691' }}>
-        {/* Dark Overlay to match home page */}
-        <div className="absolute inset-0 w-full h-full bg-black bg-opacity-60"></div>
+      <section className="py-20 lg:py-32 text-white pt-20 relative" style={{ backgroundColor: '#909c98' }}>
         <div className="max-w-7xl mx-auto px-6 text-center sticky top-0 z-40">
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-in-up">
             Our Services
