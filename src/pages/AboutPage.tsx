@@ -63,7 +63,7 @@ const AboutPage: React.FC = () => {
             <div className="animate-slide-in-left">
               <div className="relative">
                 <img 
-                  src="/masonvale-website/project-images/47157429-4b23-49de-b9d3-231fd4da56da.JPG"
+                  src="/AboutUs.png"
                   alt="Luxury Renovation Project"
                   className="rounded-2xl shadow-2xl"
                 />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { publicAsset } from '../utils/assets';
 import { ChevronDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
@@ -12,7 +13,7 @@ const Hero: React.FC = () => {
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("/hero-background.png")',
+          backgroundImage: `url(${publicAsset('hero-background.png')})`,
         }}
       >
         {/* Dark Overlay */}
@@ -36,7 +37,7 @@ const Hero: React.FC = () => {
         </h1>
         
         <p 
-          className="font-sans text-2xl md:text-3xl lg:text-4xl font-light mb-12 opacity-90 max-w-3xl mx-auto opacity-0 animate-fade-in"
+          className="font-serif text-2xl md:text-3xl lg:text-4xl font-light mb-12 opacity-90 max-w-3xl mx-auto opacity-0 animate-fade-in"
           style={{ 
             animationDelay: '0.5s', 
             animationFillMode: 'forwards',

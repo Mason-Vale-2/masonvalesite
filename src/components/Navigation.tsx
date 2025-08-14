@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { forceScrollToTop } from '../utils/navigation';
+import { publicAsset } from '../utils/assets';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,7 +47,7 @@ const Navigation: React.FC = () => {
             className="flex items-center hover:opacity-80 transition-opacity duration-300"
           >
             <img 
-              src="/Screenshot_2025-08-04_at_02.49.14-removebg-preview.png" 
+              src={publicAsset('Screenshot_2025-08-04_at_02.49.14-removebg-preview.png')} 
               alt="Mason Vale" 
               className="h-20 w-auto object-contain"
             />

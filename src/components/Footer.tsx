@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { forceScrollToTop } from '../utils/navigation';
+import { publicAsset } from '../utils/assets';
 
 const Footer: React.FC = () => {
   const navigate = useNavigate();
@@ -34,7 +35,7 @@ const Footer: React.FC = () => {
           <div className="mb-6 md:mb-0">
             <div className="mb-4">
               <img 
-                src="/Screenshot_2025-08-04_at_02.49.14-removebg-preview.png" 
+                src={publicAsset('Screenshot_2025-08-04_at_02.49.14-removebg-preview.png')} 
                 alt="Mason Vale" 
                 className="h-16 w-auto object-contain"
               />
@@ -69,7 +70,7 @@ const Footer: React.FC = () => {
               Jake Amrit - Client Director
             </p>
             <p className="font-sans text-gray-300 text-sm mt-1">
-              Dave Warah - Director of Construction
+              Dave Warah - Technical Director
             </p>
             <p className="font-sans text-gray-300 text-sm mt-1">
               Rosario Russo - Head of Architecture

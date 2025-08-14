@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { publicAsset } from '../utils/assets';
 import { Home, Palette, TreePine, Zap, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ServicesSlideshow: React.FC = () => {
@@ -7,28 +8,28 @@ const ServicesSlideshow: React.FC = () => {
       icon: Home,
       title: 'Development & Renovations',
       description: 'Comprehensive construction services from concept to completion',
-      image: '/Development-Renovations.png',
+      image: publicAsset('Development-Renovations.png'),
       details: 'Transform your vision into reality with our full-service construction and renovation expertise.'
     },
     {
       icon: Palette,
       title: 'Tailored Interiors',
       description: 'Bespoke interior design solutions for luxury living spaces',
-      image: '/Tailored-Interiors.png',
+      image: publicAsset('Tailored-Interiors.png'),
       details: 'Create stunning interiors that reflect your personal style and enhance your lifestyle.'
     },
     {
       icon: TreePine,
       title: 'Outdoor Lifestyle',
       description: 'Creating stunning outdoor spaces and landscape designs',
-      image: '/Outdoor-Lifestyle.png',
+      image: publicAsset('Outdoor-Lifestyle.png'),
       details: 'Design and build exceptional outdoor living spaces that extend your home seamlessly.'
     },
     {
       icon: Zap,
       title: 'Renewable Systems & Smart Technologies',
       description: 'Cutting-edge sustainable and smart home solutions',
-      image: '/Smart-tech-Renew.png',
+      image: publicAsset('Smart-tech-Renew.png'),
       details: 'Integrate the latest smart home and renewable energy technologies for modern living.'
     },
   ];

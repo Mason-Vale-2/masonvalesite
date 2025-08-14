@@ -1,4 +1,5 @@
 import React from 'react';
+import { publicAsset } from '../utils/assets';
 import { Home, Palette, TreePine, Zap, CheckCircle, Star, Award } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
@@ -7,16 +8,14 @@ const ServicesPage: React.FC = () => {
       icon: Home,
       title: 'Development & Renovations',
       description: 'Comprehensive construction services from concept to completion',
-              image: '/Development-Renovations.png',
+              image: publicAsset('Development-Renovations.png'),
       features: [
-        'New Build Construction',
-        'Period Property Restoration',
-        'Contemporary Extensions',
-        'Structural Alterations',
-        'Basement Conversions',
-        'Loft Conversions',
-        'Kitchen & Bathroom Renovations',
-        'Full Property Refurbishments'
+        'New builds',
+        'Contemporary extensions',
+        'Loft conversions',
+        'Period Property restorations',
+        'Full property refurbs',
+        'Kitchens, bathrooms & bedroom renovations'
       ],
       process: `Our work is grounded in close partnerships with respected architects and structural engineers, ensuring that every project benefits from a unified vision and technical excellence. We take pride in managing all build & renovation processes with efficiency, foresight, and a focus on the details that truly matter. Where we see opportunities for improvement, we're not afraid to challenge convention to deliver the best result for the client.
 
@@ -28,16 +27,13 @@ We have delivered complete construction from substructure to superstructure, ful
       icon: Palette,
       title: 'Tailored Interiors',
       description: 'Bespoke interior design solutions for luxury living spaces',
-              image: '/Tailored-Interiors.png',
+              image: publicAsset('Tailored-Interiors.png'),
       features: [
         'Luxury Interior Design',
         'Custom Furniture & Joinery',
         'High-End Material Selection',
         'Lighting Design & Installation',
-        'Art & Accessory Curation',
-        'Color Consultation',
-        'Space Planning & Optimization',
-        'Bespoke Storage Solutions'
+        'Bespoke joinery',
       ],
       process: `Each space is tailored to the client's vision, combining off-the-shelf solutions with bespoke elements to optimise both form and function. We also occasionally blend modern materials with reclaimed features to create interiors rich in character and individuality.
 
@@ -49,16 +45,16 @@ Our portfolio includes kitchens, bathrooms, living spaces, studies, and bedrooms
       icon: TreePine,
       title: 'Outdoor Lifestyle',
       description: 'Creating stunning outdoor spaces and landscape designs',
-              image: '/Outdoor-Lifestyle.png',
+              image: publicAsset('Outdoor-Lifestyle.png'),
       features: [
         'Luxury Swimming Pool Design',
         'Outdoor Kitchen & Dining Areas',
-        'Landscape Architecture',
+        'Landscape design',
         'Garden Design & Planting',
-        'Outdoor Lighting Systems',
+        'Outdoor lighting solutions',
         'Water Features & Fountains',
-        'Pergolas & Outdoor Structures',
-        'Sustainable Landscaping'
+        'Pergolas & electric awnings',
+        'Outdoor bespoke structures'
       ],
       process: `We design and craft exceptional outdoor living spaces that combine elegant landscaping, ambient garden lighting, and serene water features with beautifully integrated swimming pools. Every element from layout to finishing touches like custom barbecue islands is thoughtfully considered to elevate outdoor luxury.`
     },
@@ -66,12 +62,10 @@ Our portfolio includes kitchens, bathrooms, living spaces, studies, and bedrooms
       icon: Zap,
       title: 'Renewable Systems & Smart Technologies',
       description: 'Cutting-edge sustainable and smart home solutions',
-      image: '/Smart-tech-Renew.png',
+      image: publicAsset('Smart-tech-Renew.png'),
       features: [
         'Solar Panel Installation',
         'Smart Home Automation',
-        'Energy Management Systems',
-        'Electric Vehicle Charging',
         'Heat Pump Systems',
         'Smart Security & CCTV',
         'Integrated Audio/Visual',
