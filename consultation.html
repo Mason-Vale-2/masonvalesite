@@ -54,9 +54,13 @@
       transition: background 0.22s, color 0.22s;
     }
     .btn-submit:hover { background: #fed444; }
+    @media (max-width: 900px) {
+      .consult-form { width: 90vw !important; min-width:unset !important; padding-left: 0.7rem !important; padding-right: 0.7rem !important; }
+    }
     @media (max-width: 600px) {
+      .consult-form { width: 98vw !important; min-width:unset !important; padding-left: 0.2rem !important; padding-right: 0.2rem !important; }
       h1 { font-size: 2.1rem; }
-      form { padding: 1.2rem; }
+      form { padding: 1.2rem !important; }
     }
   </style>
 </head>
