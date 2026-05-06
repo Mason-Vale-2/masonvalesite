@@ -12,7 +12,7 @@ const ServicesSlideshow: React.FC = () => {
     },
     {
       icon: Palette,
-      title: 'Tailored Interiors',
+      title: 'Elevated Living Spaces',
       description: 'Bespoke interior design solutions for luxury living spaces',
       image: '/Tailored-Interiors.png',
       details: 'Create stunning interiors that reflect your personal style and enhance your lifestyle.'

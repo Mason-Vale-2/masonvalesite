@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
             animationTimingFunction: 'ease-out'
           }}
         >
-          Tailored Transformations for Luxury Living
+          Tailored Transformations for Prestige Homes
         </p>
         
         <button

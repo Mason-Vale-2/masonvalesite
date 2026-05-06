@@ -34,9 +34,16 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-sans text-lg font-semibold text-gray-900 mb-1">Phone</h3>
-                    <a 
-                      href="tel:07767812992" 
-                      className="font-sans text-gray-600 hover:text-gold-600 transition-colors duration-300"
+                    <a
+                      href="tel:07515653418"
+                      className="font-sans text-lg text-gray-900 hover:text-gold-600 transition-colors duration-300"
+                    >
+                      07515 653418
+                    </a>
+                    <br />
+                    <a
+                      href="tel:07767812992"
+                      className="font-sans text-lg text-gray-900 hover:text-gold-600 transition-colors duration-300"
                     >
                       07767812992
                     </a>
@@ -53,10 +60,10 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-sans text-lg font-semibold text-gray-900 mb-1">Email</h3>
                     <a 
-                      href="mailto:jake@mason-vale.com" 
+                      href="mailto:enquiries@mason-vale.com" 
                       className="font-sans text-gray-600 hover:text-gold-600 transition-colors duration-300"
                     >
-                      jake@mason-vale.com
+                      enquiries@mason-vale.com
                     </a>
                     <p className="font-sans text-sm text-gray-500 mt-1">
                       We respond within 24 hours
@@ -71,8 +78,8 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-sans text-lg font-semibold text-gray-900 mb-1">Office</h3>
                     <p className="font-sans text-gray-600">
-                      167–169 Great Portland Street<br />
-                      London W1
+                      167-169 Great Portland Street, <br />
+                      London W1W 5PF
                     </p>
                   </div>
                 </div>
@@ -84,9 +91,7 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-sans text-lg font-semibold text-gray-900 mb-1">Business Hours</h3>
                     <div className="font-sans text-gray-600 space-y-1">
-                      <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                      <p>Saturday: 9:00 AM - 4:00 PM</p>
-                      <p>Sunday: By appointment only</p>
+                      <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
                     </div>
                   </div>
                 </div>
@@ -146,7 +151,7 @@ const ContactPage: React.FC = () => {
               <div className="mt-6 text-center">
                 <div className="inline-flex items-center space-x-2 bg-gold-500 text-black font-sans font-semibold px-6 py-3 rounded-full">
                   <MapPin className="w-5 h-5" />
-                  <span>167–169 Great Portland Street, London W1</span>
+                  <span>W1W–5PF Great Portland Street, London W1</span>
                 </div>
               </div>
             </div>

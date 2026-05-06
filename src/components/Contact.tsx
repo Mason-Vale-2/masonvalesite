@@ -25,7 +25,14 @@ const Contact: React.FC = () => {
                 <div>
                   <p className="font-sans text-sm text-gray-600 mb-1">Phone</p>
                   <a 
-                    href="tel:07767812992" 
+                    href="tel:07515653418"
+                    className="font-sans text-lg text-gray-900 hover:text-gold-600 transition-colors duration-300"
+                  >
+                    07515 653418
+                  </a>
+                  <br />
+                  <a
+                    href="tel:07767812992"
                     className="font-sans text-lg text-gray-900 hover:text-gold-600 transition-colors duration-300"
                   >
                     07767812992
@@ -40,10 +47,10 @@ const Contact: React.FC = () => {
                 <div>
                   <p className="font-sans text-sm text-gray-600 mb-1">Email</p>
                   <a 
-                    href="mailto:jake@mason-vale.com" 
+                    href="mailto:enquiries@mason-vale.com" 
                     className="font-sans text-lg text-gray-900 hover:text-gold-600 transition-colors duration-300"
                   >
-                    jake@mason-vale.com
+                    enquiries@mason-vale.com
                   </a>
                 </div>
               </div>
@@ -55,8 +62,8 @@ const Contact: React.FC = () => {
                 <div>
                   <p className="font-sans text-sm text-gray-600 mb-1">Address</p>
                   <p className="font-sans text-lg text-gray-900">
-                    167–169 Great Portland Street<br />
-                    London W1
+                    167-169 Great Portland Street, <br />
+                    London W1W 5PF
                   </p>
                 </div>
               </div>
@@ -95,19 +102,19 @@ const Contact: React.FC = () => {
                 Ready to Start?
               </h3>
               <p className="font-sans text-gray-700 mb-8">
-                Let's discuss your luxury construction project today.
+                Let’s discuss your required project today.
               </p>
               
               <div className="space-y-4">
                 <a
-                  href="tel:07767812992"
+                  href="tel:07515653418"
                   className="block bg-gold-500 hover:bg-gold-600 text-black font-sans font-semibold py-4 px-8 rounded-lg transition-colors duration-300"
                 >
-                  Call Now: 07767812992
+                  Call Now: 07515653418
                 </a>
                 
                 <a
-                  href="mailto:jake@mason-vale.com"
+                  href="mailto:enquiries@mason-vale.com"
                   className="block border-2 border-gold-500 text-gold-600 hover:bg-gold-500 hover:text-black font-sans font-semibold py-4 px-8 rounded-lg transition-all duration-300"
                 >
                   Send Email

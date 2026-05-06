@@ -37,7 +37,7 @@ const Assurance: React.FC = () => {
     {
       icon: Eye,
       title: 'Discretion You Can Trust',
-      description: 'We engage with high-net-worth clients. Due to the private nature of our work, we limit the photographs we share publicly to respect our clients\' confidentiality. However, we are happy to present a detailed portfolio during a private face to face consultation.'
+      description: 'Due to the private nature of our work, we limit the photographs we share publicly to respect client confidentiality. However, we are happy to present a detailed portfolio during a private face to face consultation.'
     },
     {
       icon: Shield,

@@ -57,7 +57,7 @@ Our portfolio includes kitchens, bathrooms, living spaces, studies, and bedrooms
         'Garden Design & Planting',
         'Outdoor Lighting Systems',
         'Water Features & Fountains',
-        'Pergolas & Outdoor Structures',
+        'Pergolas',
         'Sustainable Landscaping'
       ],
       process: `We design and craft exceptional outdoor living spaces that combine elegant landscaping, ambient garden lighting, and serene water features with beautifully integrated swimming pools. Every element from layout to finishing touches like custom barbecue islands is thoughtfully considered to elevate outdoor luxury.`
