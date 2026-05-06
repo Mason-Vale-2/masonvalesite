@@ -78,7 +78,7 @@ const AboutPage: React.FC = () => {
 
             <div className="animate-slide-in-right">
               <h3 className="font-serif text-3xl font-semibold text-gray-900 mb-6">
-                Our Story
+                Clients will be fully informed
               </h3>
               <p className="font-sans text-lg leading-relaxed text-gray-700 mb-6">
                 We specialise in prime renovations and remodelling across a wide spectrum of property types from Period and Luxury homes to Contemporary spaces and Bespoke New Builds. Our strength lies in strategic collaborations with leading brands and a network of highly dedicated, skilled craftspeople, architects, designers, and engineers.

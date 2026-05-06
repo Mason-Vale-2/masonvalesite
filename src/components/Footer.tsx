@@ -67,13 +67,16 @@ const Footer: React.FC = () => {
             </p>
             <p className="font-sans text-gray-300 text-sm">
               Jake Amrit - Client Director
-            </p>
-            <p className="font-sans text-gray-300 text-sm mt-1">
-              Dave Warah - Director of Construction
-            </p>
+            </p>           
             <p className="font-sans text-gray-300 text-sm mt-1">
               Rosario Russo - Head of Architecture
             </p>
+            <p className="font-sans text-gray-300 text-sm mt-1">
+              Manvinder - Construction Technical - Lead
+            </p>
+            <p className="font-sans text-gray-300 text-sm mt-1">
+              Finley - Bespoke Joinery Specialist
+            </p>              
           </div>
         </div>
       </div>
