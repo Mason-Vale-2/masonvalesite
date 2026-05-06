@@ -66,10 +66,13 @@ const Footer: React.FC = () => {
               Copyright © 2025 Mason Vale. All rights reserved.
             </p>
             <p className="font-sans text-gray-300 text-sm">
-              Jake Amrit - Client Director
-            </p>           
+              Anthony - Business Development
+            </p>
+            <p className="font-sans text-gray-300 text-sm">
+              Jake - Client Director
+            </p>             
             <p className="font-sans text-gray-300 text-sm mt-1">
-              Rosario Russo - Head of Architecture
+              Rosario - Head of Architecture
             </p>
             <p className="font-sans text-gray-300 text-sm mt-1">
               Manvinder - Construction Technical - Lead
