@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                 className="h-16 w-auto object-contain"
               />
             </div>
-            <div className="flex flex-wrap space-x-6">
+            <div className="flex flex-wrap space-x-6 mb-3">
                                  <button 
                      onClick={() => handleNavigation('/')}
                      className="font-sans text-gray-300 hover:text-gold-400 transition-colors duration-300"
@@ -58,6 +58,14 @@ const Footer: React.FC = () => {
                    >
                      Contact
                    </button>
+            </div>
+            <div className="text-center md:text-left flex flex-col">
+              <p className="font-sans text-gray-300 text-sm">
+                VAT Registration Number: 498 5422 42
+              </p>
+              <p className="font-sans text-gray-300 text-sm">
+                Company Registration Number: 16553406
+              </p>
             </div>
           </div>
           

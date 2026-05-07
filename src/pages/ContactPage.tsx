@@ -45,7 +45,7 @@ const ContactPage: React.FC = () => {
                       href="tel:07767812992"
                       className="font-sans text-lg text-gray-900 hover:text-gold-600 transition-colors duration-300"
                     >
-                      07767812992
+                      07767 812992
                     </a>
                     <p className="font-sans text-sm text-gray-500 mt-1">
                       Available Monday - Friday, 8:00 AM - 6:00 PM

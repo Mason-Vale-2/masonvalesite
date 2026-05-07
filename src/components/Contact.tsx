@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
                     href="tel:07767812992"
                     className="font-sans text-lg text-gray-900 hover:text-gold-600 transition-colors duration-300"
                   >
-                    07767812992
+                    07767 812992
                   </a>
                 </div>
               </div>
