@@ -151,7 +151,7 @@ const ContactPage: React.FC = () => {
               <div className="mt-6 text-center">
                 <div className="inline-flex items-center space-x-2 bg-gold-500 text-black font-sans font-semibold px-6 py-3 rounded-full">
                   <MapPin className="w-5 h-5" />
-                  <span>W1W–5PF Great Portland Street, London W1</span>
+                  <span>167-169 Great Portland Street, London W1W 5PF</span>
                 </div>
               </div>
             </div>
