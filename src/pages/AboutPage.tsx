@@ -69,7 +69,7 @@ const AboutPage: React.FC = () => {
                 />
                 <div className="absolute -bottom-6 -right-6 bg-gold-500 p-4 rounded-xl shadow-lg">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-black">25+</div>
+                    <div className="text-2xl font-bold text-black">28+</div>
                     <div className="text-sm text-black">Years Combined</div>
                   </div>
                 </div>
