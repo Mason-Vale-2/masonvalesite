@@ -81,7 +81,7 @@ const AboutPage: React.FC = () => {
                 Clients will be fully informed
               </h3>
               <p className="font-sans text-lg leading-relaxed text-gray-700 mb-6">
-                We specialise in prime renovations and remodelling across a wide spectrum of property types from Period and Luxury homes to Contemporary spaces and Bespoke New Builds. Our strength lies in strategic collaborations with leading brands and a network of highly dedicated, skilled craftspeople, architects, designers, and engineers.
+                We specialise in prime renovations and remodelling across a wide spectrum of property types from Period and Prestige homes to Contemporary spaces and Bespoke New Builds. Our strength lies in strategic collaborations with leading brands and a network of highly dedicated, skilled craftspeople, architects, designers, and engineers.
               </p>
               
               <p className="font-sans text-lg leading-relaxed text-gray-700 mb-6">

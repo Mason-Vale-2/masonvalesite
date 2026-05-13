@@ -110,7 +110,7 @@ const Contact: React.FC = () => {
                   href="tel:07515653418"
                   className="block bg-gold-500 hover:bg-gold-600 text-black font-sans font-semibold py-4 px-8 rounded-lg transition-colors duration-300"
                 >
-                  Call Now: 07515653418
+                  Call Now: 07515 653418
                 </a>
                 
                 <a

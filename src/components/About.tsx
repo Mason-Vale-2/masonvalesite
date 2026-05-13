@@ -47,7 +47,7 @@ const About: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <p className="font-sans text-lg leading-relaxed text-gray-700 mb-8">
-              We specialise in prime renovations and remodelling across a wide spectrum of property types from Period and Luxury homes to Contemporary spaces and Bespoke New Builds. Our strength lies in strategic collaborations with leading brands and a network of highly dedicated, skilled craftspeople, architects, designers, and engineers.
+              We specialise in prime renovations and remodelling across a wide spectrum of property types from Period and Prestige homes to Contemporary spaces and Bespoke New Builds. Our strength lies in strategic collaborations with leading brands and a network of highly dedicated, skilled craftspeople, architects, designers, and engineers.
             </p>
             
             <p className="font-sans text-lg leading-relaxed text-gray-700 mb-8">

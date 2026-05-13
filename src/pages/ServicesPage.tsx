@@ -22,15 +22,15 @@ const ServicesPage: React.FC = () => {
 
 Our expertise spans both traditional and contemporary construction methods from restoring period buildings to construction of modern living spaces designing and assembling precision-made components crafted off-site. This ability to combine craftsmanship with innovation allows us to deliver projects that are both technically outstanding and rich in character.
 
-We have delivered complete construction from substructure to superstructure, full restoration/renovations, and extensions, working with defined materials.`
+We can delivered complete construction from substructure to superstructure, full restoration/renovations, and extensions, working with defined materials.`
     },
     {
       icon: Palette,
       title: 'Tailored Interiors',
-      description: 'Bespoke interior design solutions for luxury living spaces',
+      description: 'Bespoke interior design solutions for prime living spaces',
               image: '/Tailored-Interiors.png',
       features: [
-        'Luxury Interior Design',
+        'Bespoke Interior Design',
         'Custom Furniture & Joinery',
         'High-End Material Selection',
         'Lighting Design & Installation',
@@ -71,11 +71,10 @@ Our portfolio includes kitchens, bathrooms, living spaces, studies, and bedrooms
         'Solar Panel Installation',
         'Smart Home Automation',
         'Energy Management Systems',
-        'Electric Vehicle Charging',
         'Heat Pump Systems',
         'Smart Security & CCTV',
         'Integrated Audio/Visual',
-        'Climate Control Systems'
+        'Airconditioning Systems for Cooling & Heating'
       ],
       process: `Homes today are making the most of smart and sustainable technology to boost comfort, improve security, and reduce environmental impact. To get the best results, it's important to plan and integrate these systems right from the start of a project.
 
@@ -94,7 +93,7 @@ We provide a wide range of modern systems for homes from heating, cooling, and v
             Our Services
           </h1>
           <p className="font-sans text-xl md:text-2xl text-gold-400 font-light max-w-3xl mx-auto animate-fade-in-up">
-            Comprehensive luxury construction and renovation services tailored to your vision
+            Comprehensive prime construction and renovation services tailored to your vision
           </p>
         </div>
       </section>

@@ -17,7 +17,7 @@ const Assurance: React.FC = () => {
     {
       icon: Users, 
       title: 'Proficiency',
-      description: 'Our team is composed of skilled professionals who are passionate about delivering bespoke, high-end services. You\'ll benefit from our deep knowledge and experience, empowering you to make confident well-informed decisions throughout your project.'
+      description: 'Our team is composed of skilled professionals who are passionate about delivering bespoke, high-end services. You\'ll benefit from our deep knowledge and experience, empowering you to make confident well-informed decisions throughout your project. We always intentionally limit the number of construction projects undertaken to ensure consistent progress, continuity through to completion.'
     },
     {
       icon: MessageCircle,
@@ -27,7 +27,7 @@ const Assurance: React.FC = () => {
     {
       icon: Award,
       title: 'Reputation Reliability',
-      description: 'As a merged 2025 entity, our company brings together two trusted family businesses with over 28 years of combined experience in construction & specialist renovations. This integration unites decades of hands-on expertise, strong craftsmanship, and a reputation for reliability. Built on trust and favourable client relationships, we deliver dependable service, consistent quality, and innovative solutions across every project.'
+      description: 'As a merged 2025 entity, our company brings together two trusted family businesses with over 28 years of combined experience in construction & specialist renovations. This integration unites decades of hands-on expertise, strong craftsmanship, and a reputation for reliability. Built on trust and favourable relationships, we will deliver dependable services, consistent quality, and innovative solutions across every project.'
     },
     {
       icon: Hammer,
