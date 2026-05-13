@@ -22,7 +22,7 @@ const ServicesPage: React.FC = () => {
 
 Our expertise spans both traditional and contemporary construction methods from restoring period buildings to construction of modern living spaces designing and assembling precision-made components crafted off-site. This ability to combine craftsmanship with innovation allows us to deliver projects that are both technically outstanding and rich in character.
 
-We can delivered complete construction from substructure to superstructure, full restoration/renovations, and extensions, working with defined materials.`
+We can deliver complete construction from substructure to superstructure, full restoration/renovations, and extensions, working with defined materials.`
     },
     {
       icon: Palette,
