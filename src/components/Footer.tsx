@@ -87,7 +87,10 @@ const Footer: React.FC = () => {
             </p>
             <p className="font-sans text-gray-300 text-sm mt-1">
               Finley - Bespoke Joinery Specialist
-            </p>              
+            </p>    
+            <p className="font-sans text-gray-300 text-sm mt-1">
+              Dave - Technical Solutions
+            </p>           
           </div>
         </div>
       </div>
@@ -96,3 +99,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+
