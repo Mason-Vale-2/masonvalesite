@@ -11,17 +11,43 @@ const Brochure: React.FC = () => {
   const pages = Array.from({ length: 12 }, (_, i) => ({
     imageUrl: `/brochure/brochure-${String(i + 1).padStart(2, '0')}.jpg`,
     width: 1700,
-    height: 1700, // эти значения нужно пересчитывать в зависимости от разрешения экрана. чем меньше тем больше ширину выставлять
+    height: 1700, // значения будут пересчитываться динамически при рендере
   }));
+
+  // Функция расчёта оптимальных размеров изображения в зависимости от ширины экрана
+  const getOptimalDimensions = (screenWidth: number) => {
+    if (screenWidth >= 1700) {
+      return { width: 1700, height: 1700 };
+    }
+    // При screenWidth < 1700 — плавное увеличение размера до макс. 2386
+    const scaleFactor = 1700 / screenWidth; // чем меньше экран, тем больше масштаб
+    const size = Math.min(2386, 1700 * scaleFactor);
+    return { width: size, height: size };
+  };
 
   useEffect(() => {
     setIsMounted(true);
 
+    // Пересчитываем размеры изображений при изменении размера окна
+    const recalculateImageSizes = () => {
+      const imageDimensions = getOptimalDimensions(dimensions.width);
+
+      pages.forEach((page, index) => {
+        pages[index] = {
+          ...page,
+          width: imageDimensions.width,
+          height: imageDimensions.height,
+        };
+      });
+    };
+
+    recalculateImageSizes(); // initial calculation
     const handleResize = () => {
       setDimensions({
         width: window.innerWidth,
         height: window.innerHeight,
       });
+      recalculateImageSizes(); // re-calculate on resize
     };
 
     window.addEventListener('resize', handleResize);
@@ -57,14 +83,10 @@ const Brochure: React.FC = () => {
     >
       <FlipbookViewer
         pages={pages}
-        width={dimensions.width - paddingX * 1}
-        height={dimensions.height - paddingY * 1}
-        theme="light"
-        showControls={false}
-        zoomEnabled={true}
+        enableFullscreen={true}
+        enableZoom={true}
+        enableKeyboard={true}
         showThumbnails={false}
-        fullscreenEnabled={true}
-        keyboardNavigationEnabled={false}
         style={{
           borderRadius: '4px',
           boxShadow: '0 4px 24px rgba(0,0,0,0.15)',
