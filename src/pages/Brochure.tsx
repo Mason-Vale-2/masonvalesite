@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FlipbookViewer } from '@maxvankuik/flipbook-viewer';
+import CtaButton from '../components/Cta_button';
+import BrochureMenu from '../components/Brochure-menu';
 
 const Brochure: React.FC = () => {
   const [dimensions, setDimensions] = useState({
@@ -7,20 +9,21 @@ const Brochure: React.FC = () => {
     height: typeof window !== 'undefined' ? window.innerHeight : 600,
   });
   const [isMounted, setIsMounted] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const pages = Array.from({ length: 12 }, (_, i) => ({
     imageUrl: `/brochure/brochure-${String(i + 1).padStart(2, '0')}.jpg`,
     width: 1700,
-    height: 1700, // значения будут пересчитываться динамически при рендере
+    height: 1700, 
   }));
 
-  // Функция расчёта оптимальных размеров изображения в зависимости от ширины экрана
+
   const getOptimalDimensions = (screenWidth: number) => {
     if (screenWidth >= 1700) {
       return { width: 1700, height: 1700 };
     }
-    // При screenWidth < 1700 — плавное увеличение размера до макс. 2386
-    const scaleFactor = 1700 / screenWidth; // чем меньше экран, тем больше масштаб
+
+    const scaleFactor = 1700 / screenWidth; 
     const size = Math.min(2386, 1700 * scaleFactor);
     return { width: size, height: size };
   };
@@ -28,7 +31,7 @@ const Brochure: React.FC = () => {
   useEffect(() => {
     setIsMounted(true);
 
-    // Пересчитываем размеры изображений при изменении размера окна
+
     const recalculateImageSizes = () => {
       const imageDimensions = getOptimalDimensions(dimensions.width);
 
@@ -65,10 +68,9 @@ const Brochure: React.FC = () => {
   return (
     <div
       style={{
-        // width: '100vw',
-        // height: '100vh',
+        width: '100vw',
+        height: '100vh',
         background: '#f5f6f5',
-        padding: `${paddingY}px ${paddingX}px`,
         boxSizing: 'border-box',
         overflow: 'hidden',
         position: 'fixed',
@@ -76,9 +78,6 @@ const Brochure: React.FC = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
       }}
     >
       <FlipbookViewer
@@ -94,6 +93,13 @@ const Brochure: React.FC = () => {
           margin: '20px',
         }}
       />
+
+      {/* CTA Button */}
+      <CtaButton onOpenMenu={() => setIsOpenMenu(true)} />
+
+      {/* Contact Menu */}
+      <BrochureMenu isOpen={isOpenMenu} onClose={() => setIsOpenMenu(false)} />
+
     </div>
   );
 };
