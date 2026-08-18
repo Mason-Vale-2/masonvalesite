@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FlipbookViewer } from '@maxvankuik/flipbook-viewer';
-import CtaButton from '../components/Cta_button';
+import CtaMenu from '../components/Cta_menu';
 import BrochureMenu from '../components/Brochure-menu';
 
 const Brochure: React.FC = () => {
@@ -80,6 +80,16 @@ const Brochure: React.FC = () => {
         bottom: 0,
       }}
     >
+      {/* CTA Menu - Fixed in top-right corner */}
+      <CtaMenu style={{
+        position: 'fixed',
+        top: '5vh',
+        right: '2vh',
+        zIndex: 100,
+        maxWidth: '90vw',
+        marginRight: '10px',
+      }} />
+
       <FlipbookViewer
         pages={pages}
         enableFullscreen={true}
@@ -94,11 +104,6 @@ const Brochure: React.FC = () => {
         }}
       />
 
-      {/* CTA Button */}
-      <CtaButton onOpenMenu={() => setIsOpenMenu(true)} />
-
-      {/* Contact Menu */}
-      <BrochureMenu isOpen={isOpenMenu} onClose={() => setIsOpenMenu(false)} />
 
     </div>
   );
