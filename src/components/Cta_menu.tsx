@@ -9,12 +9,6 @@ const whatsappNumber = `340${phoneNumber}`;
 const email = 'enquiries@mason-vale.com';
 const websiteUrl = '/';
 
-interface MenuItemProps {
-  href: string;
-  children: React.ReactNode;
-  className?: string;
-}
-
 
 interface CtaMenuProps {
   style?: React.CSSProperties;
@@ -59,7 +53,7 @@ const CtaMenu: React.FC<CtaMenuProps> = ({ style }) => {
       </a>
 
       <a
-        href="/"
+        href={`${websiteUrl}`}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-2 md:gap-3 px-2 py-1 md:px-4 md:py-3 text-sm md:text-lg font-semibold bg-gold-500 hover:bg-gold-600 rounded-full transition-colors duration-300 shadow-lg whitespace-nowrap"
