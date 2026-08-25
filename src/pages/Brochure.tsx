@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FlipbookViewer } from '@maxvankuik/flipbook-viewer';
 import CtaMenu from '../components/Cta_menu';
-import BrochureMenu from '../components/Brochure-menu';
+//import BrochureMenu from '../components/Brochure-menu';
 
 const Brochure: React.FC = () => {
   const [dimensions, setDimensions] = useState({
@@ -9,10 +9,9 @@ const Brochure: React.FC = () => {
     height: typeof window !== 'undefined' ? window.innerHeight : 600,
   });
   const [isMounted, setIsMounted] = useState(false);
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const pages = Array.from({ length: 12 }, (_, i) => ({
-    imageUrl: `/brochure/brochure-${String(i + 1).padStart(2, '0')}.jpg`,
+    imageUrl: `/brochure/brochure-${String(i + 1).padStart(2, '0')}.jpg`, // md need doot /
     width: 1700,
     height: 1700, 
   }));
@@ -61,9 +60,6 @@ const Brochure: React.FC = () => {
     return null;
   }
 
-  const isMobile = dimensions.width < 768;
-  const paddingX = isMobile ? 4 : 20;
-  const paddingY = isMobile ? 4 : 16;
 
   return (
     <div
@@ -80,7 +76,7 @@ const Brochure: React.FC = () => {
         bottom: 0,
       }}
     >
-      {/* CTA Menu - Fixed in top-right corner */}
+
       <CtaMenu style={{
         position: 'fixed',
         top: '5vh',
@@ -88,6 +84,9 @@ const Brochure: React.FC = () => {
         zIndex: 100,
         maxWidth: '90vw',
         marginRight: '10px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
       }} />
 
       <FlipbookViewer
