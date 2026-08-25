@@ -78,6 +78,12 @@ const Navigation: React.FC = () => {
                    >
                      Contact
                    </button>
+                    <button 
+                     onClick={() => handleNavigation('/brochure')}
+                     className="font-sans text-gray-200 hover:text-gold-400 transition-colors duration-300"
+                   >
+                     Brochure
+                   </button>
             <a 
               href="tel:07515653418"
               className="flex items-center space-x-2 bg-gold-500 hover:bg-gold-600 text-black font-sans font-semibold px-4 py-2 rounded-full transition-colors duration-300"
