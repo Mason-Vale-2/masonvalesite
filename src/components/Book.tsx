@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const FlipBook: React.FC = () => {
-
-    const count = 12; // number of pages in the brochure
+    const count = 12; // pages count, must be even
     const images = Array.from({ length: count }, (_, i) =>
-        `/brochure/brochure-${String(i + 1).padStart(2, '0')}.jpg`
+        `./brochure/brochure-${String(i + 1).padStart(2, "0")}.jpg`
     );
-
 
     const papers: { id: number; front: string; back: string | null }[] = [];
     for (let i = 0; i < images.length; i += 2) {
@@ -23,9 +21,10 @@ const FlipBook: React.FC = () => {
     const [activePageIndex, setActivePageIndex] = useState<number>(0);
     const [isMobile, setIsMobile] = useState<boolean>(false);
 
-    const [touchStart, setTouchStart] = useState<number | null>(null);
-    const [touchEnd, setTouchEnd] = useState<number | null>(null);
-    const minSwipeDistance = 40;
+
+    const touchStartRef = useRef<number | null>(null);
+    const touchEndRef = useRef<number | null>(null);
+    const minSwipeDistance = 35;
 
     useEffect(() => {
         const handleResize = () => {
@@ -50,9 +49,7 @@ const FlipBook: React.FC = () => {
 
     const goNextPage = () => {
         if (isMobile) {
-            if (activePageIndex < images.length - 1) {
-                setActivePageIndex((prev) => prev + 1);
-            }
+            setActivePageIndex((prev) => Math.min(prev + 1, images.length - 1));
         } else {
             const currentLoc = getDesktopLocation(activePageIndex);
             if (currentLoc < maxLocation) {
@@ -63,9 +60,7 @@ const FlipBook: React.FC = () => {
 
     const goPrevPage = () => {
         if (isMobile) {
-            if (activePageIndex > 0) {
-                setActivePageIndex((prev) => prev - 1);
-            }
+            setActivePageIndex((prev) => Math.max(prev - 1, 0));
         } else {
             const currentLoc = getDesktopLocation(activePageIndex);
             if (currentLoc > 1) {
@@ -74,18 +69,23 @@ const FlipBook: React.FC = () => {
         }
     };
 
+    const goToFirstPage = () => {
+        setActivePageIndex(0);
+    };
+
     const handleTouchStart = (e: React.TouchEvent) => {
-        setTouchEnd(null);
-        setTouchStart(e.targetTouches[0].clientX);
+        touchEndRef.current = null;
+        touchStartRef.current = e.targetTouches[0].clientX;
     };
 
     const handleTouchMove = (e: React.TouchEvent) => {
-        setTouchEnd(e.targetTouches[0].clientX);
+        touchEndRef.current = e.targetTouches[0].clientX;
     };
 
     const handleTouchEnd = () => {
-        if (!touchStart || !touchEnd) return;
-        const distance = touchStart - touchEnd;
+        if (touchStartRef.current === null || touchEndRef.current === null) return;
+
+        const distance = touchStartRef.current - touchEndRef.current;
         const isLeftSwipe = distance > minSwipeDistance;
         const isRightSwipe = distance < -minSwipeDistance;
 
@@ -94,6 +94,9 @@ const FlipBook: React.FC = () => {
         } else if (isRightSwipe) {
             goPrevPage();
         }
+
+        touchStartRef.current = null;
+        touchEndRef.current = null;
     };
 
     const getBookTransform = () => {
@@ -104,16 +107,16 @@ const FlipBook: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-0 md:p-6 font-sans select-none overflow-hidden text-slate-200 flipbook-container">
+        <div className="flex flex-col items-center justify-between h-[100dvh] p-2 md:p-6 font-sans select-none overflow-hidden text-slate-200 flipbook-container">
             <style>{`
                 .flipbook-container {
-                    --book-page-w: min(92vw, 440px);
-                    --book-page-h: min(74vh, 640px);
+                    --book-page-w: min(88vw, 360px);
+                    --book-page-h: min(60vh, 520px);
                 }
                 @media (min-width: 480px) {
                     .flipbook-container {
-                        --book-page-w: min(88vw, 460px);
-                        --book-page-h: min(74vh, 670px);
+                        --book-page-w: min(85vw, 420px);
+                        --book-page-h: min(65vh, 600px);
                     }
                 }
                 @media (min-width: 768px) {
@@ -128,7 +131,7 @@ const FlipBook: React.FC = () => {
                         --book-page-h: calc(var(--book-page-w) * 1.43);
                     }
                 }
-                @media (min-width: 1280px) {
+                @media (min-width: 1380px) {
                     .flipbook-container {
                         --book-page-w: min(calc((100vw - 200px) / 2), 500px);
                         --book-page-h: calc(var(--book-page-w) * 1.41);
@@ -142,7 +145,8 @@ const FlipBook: React.FC = () => {
                 }
             `}</style>
 
-            <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl gap-2 md:gap-4 lg:gap-6 relative">
+            {/* main zone of the book */}
+            <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl gap-2 md:gap-4 lg:gap-6 relative my-auto">
                 <button
                     onClick={goPrevPage}
                     disabled={activePageIndex === 0}
@@ -156,47 +160,42 @@ const FlipBook: React.FC = () => {
 
                 {isMobile ? (
                     <div
-                        className="relative cursor-grab active:cursor-grabbing flex-shrink-0"
+                        className="relative cursor-grab active:cursor-grabbing flex-shrink-0 touch-pan-y"
                         onTouchStart={handleTouchStart}
                         onTouchMove={handleTouchMove}
                         onTouchEnd={handleTouchEnd}
-                        style={{ width: "var(--book-page-w)", height: "var(--book-page-h)", perspective: "1500px" }}
+                        style={{ width: "var(--book-page-w)", height: "var(--book-page-h)" }}
                     >
                         {images.map((image, idx) => {
                             const isFlipped = idx < activePageIndex;
                             const isActive = idx === activePageIndex;
 
-                            const zIndex = isActive ? 50 : isFlipped ? idx : images.length - idx;
-                            const rotateY = isFlipped ? -180 : 0;
+                            if (Math.abs(idx - activePageIndex) > 1 && !isFlipped) {
+                                return null;
+                            }
 
                             return (
                                 <div
                                     key={idx}
-                                    className="absolute top-0 left-0 w-full h-full transition-all duration-500 ease-out shadow-2xl rounded-2xl"
+                                    className="absolute top-0 left-0 w-full h-full transition-all duration-300 ease-in-out shadow-2xl rounded-2xl overflow-hidden"
                                     style={{
-                                        transformOrigin: "left center",
-                                        transform: `rotateY(${rotateY}deg)`,
-                                        transformStyle: "preserve-3d",
-                                        zIndex,
-                                        opacity: isFlipped ? 0 : 1,
+                                        zIndex: isActive ? 20 : isFlipped ? 0 : 10,
+                                        opacity: isActive ? 1 : 0,
+                                        transform: isActive
+                                            ? "scale(1) translateX(0)"
+                                            : isFlipped
+                                                ? "scale(0.95) translateX(-20px)"
+                                                : "scale(0.95) translateX(20px)",
                                         pointerEvents: isActive ? "auto" : "none",
+                                        visibility: Math.abs(idx - activePageIndex) > 1 ? "hidden" : "visible",
                                     }}
                                 >
-                                    <div
-                                        className="absolute inset-0 select-none bg-transparent rounded-2xl overflow-hidden shadow-2xl"
-                                        style={{
-                                            WebkitBackfaceVisibility: "hidden",
-                                            backfaceVisibility: "hidden",
-                                            transformStyle: "preserve-3d",
-                                        }}
-                                    >
-                                        <img
-                                            src={image}
-                                            alt={`Page ${idx + 1}`}
-                                            className="w-full h-full rounded-2xl"
-                                            draggable={false}
-                                        />
-                                    </div>
+                                    <img
+                                        src={image}
+                                        alt={`Page ${idx + 1}`}
+                                        className="w-full h-full object-cover rounded-2xl pointer-events-none"
+                                        draggable={false}
+                                    />
                                 </div>
                             );
                         })}
@@ -207,11 +206,10 @@ const FlipBook: React.FC = () => {
                         style={{
                             width: "calc(2 * var(--book-page-w))",
                             height: "var(--book-page-h)",
-                            perspective: "1800px"
+                            perspective: "1800px",
                         }}
                     >
-                        <div className="w-full h-full relative" style={{ transformStyle: "preserve-3d" }}>
-                            {/* Sliding of 3D container */}
+                            <div className="w-full h-full relative" style={{ transformStyle: "preserve-3d" }}>
                             <div
                                 className="absolute top-0 left-0 h-full transition-transform duration-500 ease-in-out"
                                 style={{
@@ -220,13 +218,13 @@ const FlipBook: React.FC = () => {
                                     transform: getBookTransform(),
                                 }}
                             >
-                                {/* Central shadow stripe */}
-                                {getDesktopLocation(activePageIndex) > 1 && getDesktopLocation(activePageIndex) < maxLocation && (
-                                    <div
-                                        className="absolute top-0 bottom-0 left-0 w-[5px] bg-gradient-to-r from-black/40 via-black/60 to-black/40 z-[100] -translate-x-1/2 pointer-events-none rounded-full"
-                                        style={{ transformStyle: "preserve-3d" }}
-                                    />
-                                )}
+                                    {getDesktopLocation(activePageIndex) > 1 &&
+                                        getDesktopLocation(activePageIndex) < maxLocation && (
+                                            <div
+                                                className="absolute top-0 bottom-0 left-0 w-[5px] bg-gradient-to-r from-black/40 via-black/60 to-black/40 z-[100] -translate-x-1/2 pointer-events-none rounded-full"
+                                                style={{ transformStyle: "preserve-3d" }}
+                                            />
+                                        )}
 
                                 {papers.map((paper, index) => {
                                     const paperIndex = index + 1;
@@ -245,7 +243,6 @@ const FlipBook: React.FC = () => {
                                                 zIndex,
                                             }}
                                         >
-                                            {/* Front Side (Recto) */}
                                             <div
                                                 className="absolute top-0 left-0 w-full h-full select-none shadow-md rounded-r-2xl"
                                                 style={{
@@ -263,7 +260,6 @@ const FlipBook: React.FC = () => {
                                                 />
                                             </div>
 
-                                            {/* Back Side (Verso) */}
                                             <div
                                                 className="absolute top-0 left-0 w-full h-full select-none shadow-md rounded-l-2xl"
                                                 style={{
@@ -300,45 +296,51 @@ const FlipBook: React.FC = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
                 </button>
+            </div>
 
-                {/* Mobile & Tablet Bottom Controls */}
-                <div className="flex md:hidden items-center justify-center gap-6 z-50 mt-2 flex-shrink-0">
+            {/* Mobile page info */}
+            <div className="flex md:hidden flex-col items-center gap-2 mb-2 z-50 flex-shrink-0">
+                <div className="flex items-center justify-center gap-4">
                     <button
                         onClick={goPrevPage}
                         disabled={activePageIndex === 0}
-                        className="p-4 rounded-full bg-slate-900/95 text-slate-100 shadow-xl border border-slate-800 active:scale-95 disabled:opacity-20"
+                        className="p-3.5 rounded-full text-black  bg-gold-500 hover:bg-gold-600 shadow-xl border-none active:scale-95 disabled:opacity-20"
                         aria-label="Previous page"
                     >
-                        <svg className="w-6 h-6 stroke-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 stroke-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                         </svg>
                     </button>
 
-                    <span className="text-sm font-semibold text-slate-300 bg-slate-900/80 px-4 py-2 rounded-full font-mono shadow-md border border-slate-800/50">
+                    <button
+                        onClick={goToFirstPage}
+                        className="text-xs font-semibold text-black  bg-gold-500 hover:bg-gold-600 px-4 py-2.5 rounded-full font-mono shadow-md border border-none active:scale-95"
+                    >
                         {activePageIndex + 1} / {images.length}
-                    </span>
+                    </button>
 
                     <button
                         onClick={goNextPage}
                         disabled={activePageIndex === images.length - 1}
-                        className="p-4 rounded-full bg-slate-900/95 text-slate-100 shadow-xl border border-slate-800 active:scale-95 disabled:opacity-20"
+                        className="p-3.5 rounded-full text-black  bg-gold-500 hover:bg-gold-600 shadow-xl border-none active:scale-95 disabled:opacity-20"
                         aria-label="Next page"
                     >
-                        <svg className="w-6 h-6 stroke-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 stroke-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                     </button>
                 </div>
             </div>
 
-            <div className="hidden md:block mt-4 px-6 py-3 md:text-lg font-semibold text-black bg-gold-500 hover:bg-gold-600 backdrop-blur-md rounded-full shadow-lg whitespace-nowrap transition-colors duration-300">
+            {/* Desktop page info */}
+            <div className="hidden md:block mb-4 px-6 py-3 md:text-lg font-semibold text-black bg-gold-500 hover:bg-gold-600 backdrop-blur-md rounded-full shadow-lg whitespace-nowrap transition-colors duration-300 flex-shrink-0">
                 {activePageIndex === 0 ? (
                     <span>Title (Page 1)</span>
                 ) : activePageIndex === images.length - 1 ? (
-                    <span>Back cover (Page {images.length})</span>
+                        <span>Back Cover (Page {images.length})</span>
                 ) : (
                     <span>
-                        Page {activePageIndex + 1} - {activePageIndex + 2} of {images.length}
+                                Pages {activePageIndex + 1} - {activePageIndex + 2} of {images.length}
                     </span>
                 )}
             </div>
