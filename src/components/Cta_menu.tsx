@@ -25,7 +25,7 @@ const CtaMenu: React.FC<CtaMenuProps> = ({ style }) => {
         href={`tel:${phoneNumber}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 md:gap-3 px-2 py-1 md:px-4 md:py-3 text-sm md:text-lg font-semibold bg-gold-500 hover:bg-gold-600 rounded-full transition-colors duration-300 shadow-lg whitespace-nowrap"
+        className="flex items-center gap-2 md:gap-3 px-2 py-1 md:px-4 md:py-3 text-sm md:text-lg font-semibold bg-gold-500 hover:bg-gold-600 rounded-full transition-colors duration-300 shadow-lg whitespace-nowrap max-h-10"
       >
         <Phone size={20} className="md:size-6" />
         <span className="inline">Call Us</span>
@@ -35,7 +35,7 @@ const CtaMenu: React.FC<CtaMenuProps> = ({ style }) => {
         href={`https://wa.me/${whatsappNumber}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 md:gap-3 px-2 py-1 md:px-4 md:py-3 text-sm md:text-lg font-semibold bg-gold-500 hover:bg-gold-600 rounded-full transition-colors duration-300 shadow-lg whitespace-nowrap"
+        className="flex items-center gap-2 md:gap-3 px-2 py-1 md:px-4 md:py-3 text-sm md:text-lg font-semibold bg-gold-500 hover:bg-gold-600 rounded-full transition-colors duration-300 shadow-lg whitespace-nowrap max-h-10"
       >
         <Send size={20} className="md:size-6" />
         <span className="inline">WhatsApp</span>
@@ -45,7 +45,7 @@ const CtaMenu: React.FC<CtaMenuProps> = ({ style }) => {
         href={`mailto:${email}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 md:gap-3 px-2 py-1 md:px-4 md:py-3 text-sm md:text-lg font-semibold bg-gold-500 hover:bg-gold-600 rounded-full transition-colors duration-300 shadow-lg whitespace-nowrap"
+        className="flex items-center gap-2 md:gap-3 px-2 py-1 md:px-4 md:py-3 text-sm md:text-lg font-semibold bg-gold-500 hover:bg-gold-600 backdrop-blur-md rounded-full transition-colors duration-300 shadow-lg whitespace-nowrap max-h-10"
       >
         <Mail size={20} className="md:size-6" />
         <span className="inline">Email</span>
