@@ -184,8 +184,8 @@ const FlipBook: React.FC = () => {
                                         transform: isActive
                                             ? "scale(1) translateX(0)"
                                             : isFlipped
-                                                ? "scale(0.95) translateX(-20px)"
-                                                : "scale(0.95) translateX(20px)",
+                                                ? "scale(0.95) translateX(-50px)"
+                                                : "scale(0.95) translateX(50px)",
                                         pointerEvents: isActive ? "auto" : "none",
                                         visibility: Math.abs(idx - activePageIndex) > 1 ? "hidden" : "visible",
                                     }}
