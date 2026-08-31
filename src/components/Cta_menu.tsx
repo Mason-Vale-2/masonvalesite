@@ -16,7 +16,7 @@ interface CtaMenuProps {
 const CtaMenu: React.FC<CtaMenuProps> = ({ style }) => {
   return (
     <div 
-      className="fixed top-4 right-4 z-50 flex flex-row items-center gap-2 md:gap-4 w-fit md:w-auto"
+      className="fixed top-4 right-4 z-50 flex flex-row items-center gap-2 md:gap-4 w-fit md:w-auto sm:flex-row sm:items-center sm:gap-2 sm:w-fit"
       style={{
         ...style,
       }}

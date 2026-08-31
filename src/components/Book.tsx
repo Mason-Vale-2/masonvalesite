@@ -177,15 +177,15 @@ const FlipBook: React.FC = () => {
                             return (
                                 <div
                                     key={idx}
-                                    className="absolute top-0 left-0 w-full h-full transition-all duration-300 ease-in-out shadow-2xl rounded-2xl overflow-hidden"
+                                    className="absolute top-0 left-0 w-full h-full transition-all duration-700 ease-in-out shadow-2xl rounded-2xl overflow-hidden"
                                     style={{
                                         zIndex: isActive ? 20 : isFlipped ? 0 : 10,
                                         opacity: isActive ? 1 : 0,
                                         transform: isActive
                                             ? "scale(1) translateX(0)"
                                             : isFlipped
-                                                ? "scale(0.95) translateX(-20px)"
-                                                : "scale(0.95) translateX(20px)",
+                                                ? "scale(0.95) translateX(-50px)"
+                                                : "scale(0.95) translateX(50px)",
                                         pointerEvents: isActive ? "auto" : "none",
                                         visibility: Math.abs(idx - activePageIndex) > 1 ? "hidden" : "visible",
                                     }}
