@@ -3,7 +3,7 @@ import { Phone, Mail } from 'lucide-react';
 import WhatsUpIcon from '/whatsapp.svg';
 
 const phoneNumber = '07463961175';
-const whatsappNumber = `{phoneNumber}`;
+const whatsappNumber = `44${phoneNumber}`;
 const email = 'enquiries@mason-vale.com'; 
 
 interface CtaMenuProps {
