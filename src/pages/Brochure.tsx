@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import FlipBook from '../components/Book';
 import CtaMenu from '../components/Cta_menu';
-//import BrochureMenu from '../components/Brochure-menu';
 
 const Brochure: React.FC = () => {
 
@@ -20,21 +18,8 @@ const Brochure: React.FC = () => {
         bottom: 0,
       }}
     >
-
-      <CtaMenu style={{
-        position: 'fixed',
-        top: '5vh',
-        right: '2vh',
-        zIndex: 100,
-        maxWidth: '90vw',
-        marginRight: '10px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-      }} />
-
+      <CtaMenu />
       <FlipBook />
-
 
     </div>
   );

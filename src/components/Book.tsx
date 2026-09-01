@@ -177,7 +177,7 @@ const FlipBook: React.FC = () => {
                             return (
                                 <div
                                     key={idx}
-                                    className="absolute top-0 left-0 w-full h-full transition-all duration-700 ease-in-out shadow-2xl rounded-2xl overflow-hidden"
+                                    className="absolute top-0 left-0 w-full h-full transition-all duration-800 ease-in-out shadow-2xl rounded-2xl overflow-hidden"
                                     style={{
                                         zIndex: isActive ? 20 : isFlipped ? 0 : 10,
                                         opacity: isActive ? 1 : 0,
@@ -335,7 +335,7 @@ const FlipBook: React.FC = () => {
             {/* Desktop page info */}
             <div className="hidden md:block mb-4 px-6 py-3 md:text-lg font-semibold text-black bg-gold-500 hover:bg-gold-600 backdrop-blur-md rounded-full shadow-lg whitespace-nowrap transition-colors duration-300 flex-shrink-0">
                 {activePageIndex === 0 ? (
-                    <span>Title (Page 1)</span>
+                    <span>Pages</span>
                 ) : activePageIndex === images.length - 1 ? (
                         <span>Back Cover (Page {images.length})</span>
                 ) : (
