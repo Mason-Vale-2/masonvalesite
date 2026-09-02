@@ -9,55 +9,55 @@ const Footer: React.FC = () => {
   const handleNavigation = (path: string) => {
     // Force scroll to top immediately
     forceScrollToTop();
-    
+
     // Navigate to the path
     navigate(path);
-    
+
     // Force scroll to top again after navigation
     setTimeout(() => {
       forceScrollToTop();
     }, 0);
-    
+
     setTimeout(() => {
       forceScrollToTop();
     }, 50);
-    
+
     setTimeout(() => {
       forceScrollToTop();
     }, 100);
   };
 
   return (
-            <footer className="text-gray-200 py-12 border-t backdrop-blur-sm" style={{ backgroundColor: '#909c98', borderColor: '#6A7470' }}>
+    <footer className="text-gray-200 py-12 border-t backdrop-blur-sm" style={{ backgroundColor: '#909c98', borderColor: '#6A7470' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="mb-4">
-              <img 
-                src="/Screenshot_2025-08-04_at_02.49.14-removebg-preview.png" 
-                alt="Mason Vale" 
+              <img
+                src="/Screenshot_2025-08-04_at_02.49.14-removebg-preview.png"
+                alt="Mason Vale"
                 className="h-16 w-auto object-contain"
               />
             </div>
             <div className="flex flex-wrap space-x-6 mb-3">
-                                 <button 
-                     onClick={() => handleNavigation('/')}
-                     className="font-sans text-gray-300 hover:text-gold-400 transition-colors duration-300"
-                   >
-                     Home
-                   </button>
-                   <button 
-                     onClick={() => handleNavigation('/services')}
-                     className="font-sans text-gray-300 hover:text-gold-400 transition-colors duration-300"
-                   >
-                     Services
-                   </button>
-                   <button 
-                     onClick={() => handleNavigation('/contact')}
-                     className="font-sans text-gray-300 hover:text-gold-400 transition-colors duration-300"
-                   >
-                     Contact
-                   </button>
+              <button
+                onClick={() => handleNavigation('/')}
+                className="font-sans text-gray-300 hover:text-gold-400 transition-colors duration-300"
+              >
+                Home
+              </button>
+              <button
+                onClick={() => handleNavigation('/services')}
+                className="font-sans text-gray-300 hover:text-gold-400 transition-colors duration-300"
+              >
+                Services
+              </button>
+              <button
+                onClick={() => handleNavigation('/contact')}
+                className="font-sans text-gray-300 hover:text-gold-400 transition-colors duration-300"
+              >
+                Contact
+              </button>
             </div>
             <div className="text-center md:text-left flex flex-col">
               <p className="font-sans text-gray-300 text-sm">
@@ -66,19 +66,19 @@ const Footer: React.FC = () => {
               <p className="font-sans text-gray-300 text-sm">
                 Company Registration Number: 16553406
               </p>
+              <p className="font-sans text-gray-300 mb-2">
+                Copyright © 2025 Mason Vale. All rights reserved.
+              </p>
             </div>
           </div>
-          
+
           <div className="text-center md:text-right">
-            <p className="font-sans text-gray-300 mb-2">
-              Copyright © 2025 Mason Vale. All rights reserved.
-            </p>
             <p className="font-sans text-gray-300 text-sm">
               Anthony - Business Development
             </p>
             <p className="font-sans text-gray-300 text-sm">
               Jake - Client Director
-            </p>             
+            </p>
             <p className="font-sans text-gray-300 text-sm mt-1">
               Rosario - Head of Architecture
             </p>
@@ -87,10 +87,10 @@ const Footer: React.FC = () => {
             </p>
             <p className="font-sans text-gray-300 text-sm mt-1">
               Finley - Bespoke Joinery Specialist
-            </p>    
+            </p>
             <p className="font-sans text-gray-300 text-sm mt-1">
               Dave - Technical Solutions
-            </p>           
+            </p>
           </div>
         </div>
       </div>

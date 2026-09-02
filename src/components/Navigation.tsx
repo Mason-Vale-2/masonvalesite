@@ -85,7 +85,7 @@ const Navigation: React.FC = () => {
               Brochure
             </button>
             <a
-              href="tel:07515653418"
+              href="tel:07463961175"
               className="flex items-center space-x-2 bg-gold-500 hover:bg-gold-600 text-black font-sans font-semibold px-4 py-2 rounded-full transition-colors duration-300"
             >
               <Phone className="w-4 h-4" />
@@ -137,7 +137,7 @@ const Navigation: React.FC = () => {
                 Brochure
               </button>
               <a
-                href="tel:07767812992"
+                href="tel:07463961175"
                 className="flex items-center space-x-2 bg-gold-500 hover:bg-gold-600 text-black font-sans font-semibold px-4 py-2 rounded-full transition-colors duration-300 mx-4 w-fit"
               >
                 <Phone className="w-4 h-4" />
