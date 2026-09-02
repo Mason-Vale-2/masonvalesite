@@ -3,7 +3,7 @@ import { Phone, Mail } from 'lucide-react';
 import WhatsUpIcon from '/whatsapp.svg';
 
 const phoneNumber = '07463961175';
-const whatsappNumber = `{phoneNumber}`;
+const whatsappNumber = `44${phoneNumber}`;
 const email = 'enquiries@mason-vale.com'; 
 
 interface CtaMenuProps {
@@ -11,6 +11,7 @@ interface CtaMenuProps {
 }
 
 const CtaMenu: React.FC<CtaMenuProps> = ({ style }) => {
+
   return (
     <div
       className="fixed top-[3vh] right-[0vh] z-[100] max-w-[90vw] mr-[10px] flex flex-row md:flex-col items-center md:items-start justify-center gap-2 md:gap-3 p-2 md:p-3 transition-all duration-300"
